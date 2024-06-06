@@ -1,53 +1,561 @@
-2024-06-06T16:42:54.934+03:00  INFO 12870 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : Starting DpaBackendApplication using Java 17.0.9 with PID 12870 (/Users/mertdortkardesler/Desktop/projects/interview/swa_dpa/target/classes started by mertdortkardesler in /Users/mertdortkardesler/Desktop/projects/interview/swa_dpa)
-2024-06-06T16:42:54.940+03:00  INFO 12870 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : No active profile set, falling back to 1 default profile: "default"
-2024-06-06T16:42:56.062+03:00  INFO 12870 --- [dpa-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-06-06T16:42:56.145+03:00  INFO 12870 --- [dpa-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interface.
-2024-06-06T16:42:57.662+03:00  INFO 12870 --- [dpa-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-06-06T16:42:57.673+03:00  INFO 12870 --- [dpa-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-06-06T16:42:57.673+03:00  INFO 12870 --- [dpa-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-06-06T16:42:57.749+03:00  INFO 12870 --- [dpa-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-06-06T16:42:57.749+03:00  INFO 12870 --- [dpa-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2685 ms
-2024-06-06T16:42:57.757+03:00 TRACE 12870 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
-2024-06-06T16:42:57.818+03:00 TRACE 12870 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
-2024-06-06T16:42:57.819+03:00 TRACE 12870 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'formContentFilter'; order=-9900, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]
-2024-06-06T16:42:57.820+03:00 TRACE 12870 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'requestContextFilter'; order=-105, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]
-2024-06-06T16:42:57.825+03:00 DEBUG 12870 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
-2024-06-06T16:42:57.826+03:00 DEBUG 12870 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
-2024-06-06T16:42:58.069+03:00  INFO 12870 --- [dpa-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-06-06T16:42:58.103+03:00  INFO 12870 --- [dpa-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-06-06T16:42:58.122+03:00  INFO 12870 --- [dpa-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-06-06T16:42:58.342+03:00  INFO 12870 --- [dpa-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-06-06T16:42:58.366+03:00  INFO 12870 --- [dpa-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-06-06T16:42:58.621+03:00  INFO 12870 --- [dpa-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4e2109fe
-2024-06-06T16:42:58.623+03:00  INFO 12870 --- [dpa-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-06-06T16:42:59.451+03:00  INFO 12870 --- [dpa-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-06-06T16:42:59.487+03:00  INFO 12870 --- [dpa-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-06-06T16:43:00.520+03:00  WARN 12870 --- [dpa-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-06-06T16:43:00.630+03:00 TRACE 12870 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+2024-06-06T16:48:01.194+03:00  INFO 16004 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : Starting DpaBackendApplication using Java 17.0.9 with PID 16004 (/Users/mertdortkardesler/Desktop/projects/interview/swa_dpa/target/classes started by mertdortkardesler in /Users/mertdortkardesler/Desktop/projects/interview/swa_dpa)
+2024-06-06T16:48:01.201+03:00  INFO 16004 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-06-06T16:48:02.334+03:00  INFO 16004 --- [dpa-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06T16:48:02.490+03:00  INFO 16004 --- [dpa-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 150 ms. Found 1 JPA repository interface.
+2024-06-06T16:48:03.901+03:00  INFO 16004 --- [dpa-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-06T16:48:03.915+03:00  INFO 16004 --- [dpa-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-06T16:48:03.916+03:00  INFO 16004 --- [dpa-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-06T16:48:04.000+03:00  INFO 16004 --- [dpa-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-06T16:48:04.001+03:00  INFO 16004 --- [dpa-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2709 ms
+2024-06-06T16:48:04.015+03:00 TRACE 16004 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
+2024-06-06T16:48:04.117+03:00 TRACE 16004 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
+2024-06-06T16:48:04.118+03:00 TRACE 16004 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'formContentFilter'; order=-9900, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]
+2024-06-06T16:48:04.120+03:00 TRACE 16004 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'requestContextFilter'; order=-105, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]
+2024-06-06T16:48:04.131+03:00 DEBUG 16004 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2024-06-06T16:48:04.132+03:00 DEBUG 16004 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-06T16:48:04.608+03:00  INFO 16004 --- [dpa-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06T16:48:04.726+03:00  INFO 16004 --- [dpa-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-06T16:48:04.759+03:00  INFO 16004 --- [dpa-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-06T16:48:05.003+03:00  INFO 16004 --- [dpa-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06T16:48:05.035+03:00  INFO 16004 --- [dpa-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-06T16:48:05.240+03:00  INFO 16004 --- [dpa-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@365e65bb
+2024-06-06T16:48:05.242+03:00  INFO 16004 --- [dpa-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-06T16:48:06.092+03:00  INFO 16004 --- [dpa-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06T16:48:06.151+03:00  INFO 16004 --- [dpa-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T16:48:07.113+03:00  WARN 16004 --- [dpa-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06T16:48:07.324+03:00 TRACE 16004 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	m.a.d.c.SubscriberController:
+	{GET [/subscriber]}: getAllSubscribers()
+	{PUT [/subscriber/{id}]}: updateSubscriber(Long,SubscriberDto)
+	{POST [/subscriber]}: createSubscriber(SubscriberDto)
+	{GET [/subscriber/{id}]}: getSubscriber(Long)
+	{DELETE [/subscriber/{id}]}: deleteSubscriber(Long)
+2024-06-06T16:48:07.335+03:00 TRACE 16004 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2024-06-06T16:48:07.339+03:00 DEBUG 16004 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2024-06-06T16:48:07.444+03:00 DEBUG 16004 --- [dpa-backend] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-06-06T16:48:07.620+03:00 TRACE 16004 --- [dpa-backend] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-06-06T16:48:07.637+03:00 TRACE 16004 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-06-06T16:48:07.637+03:00 TRACE 16004 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-06-06T16:48:07.638+03:00 DEBUG 16004 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-06-06T16:48:07.692+03:00 DEBUG 16004 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-06T16:48:07.727+03:00 DEBUG 16004 --- [dpa-backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-06T16:48:07.941+03:00  INFO 16004 --- [dpa-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-06T16:48:07.967+03:00  INFO 16004 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : Started DpaBackendApplication in 7.673 seconds (process running for 8.408)
+2024-06-06T16:48:30.056+03:00  INFO 16004 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:48:30
+2024-06-06T16:49:00.009+03:00  INFO 16004 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:49:00
+2024-06-06T16:49:30.006+03:00  INFO 16004 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:49:30
+2024-06-06T16:50:00.008+03:00  INFO 16004 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:50:00
+2024-06-06T16:50:30.010+03:00  INFO 16004 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:50:30
+2024-06-06T16:51:00.009+03:00  INFO 16004 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:51:00
+2024-06-06T16:51:30.010+03:00  INFO 16004 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:51:30
+2024-06-06T16:52:00.007+03:00  INFO 16004 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:52:00
+2024-06-06T16:52:30.016+03:00  INFO 16004 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:52:30
+2024-06-06T16:53:00.009+03:00  INFO 16004 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:53:00
+2024-06-06T16:53:30.006+03:00  INFO 16004 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:53:30
+2024-06-06T16:54:00.011+03:00  INFO 16004 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:54:00
+2024-06-06T16:54:16.536+03:00  INFO 16004 --- [dpa-backend] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-06T16:54:16.540+03:00  INFO 16004 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-06T16:54:16.542+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@603a34e5
+2024-06-06T16:54:16.543+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@623ed5ed
+2024-06-06T16:54:16.544+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@6ce8bf64
+2024-06-06T16:54:16.560+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2024-06-06T16:54:16.561+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2024-06-06T16:54:16.563+03:00 DEBUG 16004 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-06T16:54:16.563+03:00  INFO 16004 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 22 ms
+2024-06-06T16:54:16.576+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/subscriber", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T16:54:16.585+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to mmd.assignment.dpa_backend.controller.SubscriberController#getAllSubscribers()
+2024-06-06T16:54:16.627+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.method.HandlerMethod             : Arguments: []
+2024-06-06T16:54:16.979+03:00 DEBUG 16004 --- [dpa-backend] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-06-06T16:54:16.985+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [[mmd.assignment.dpa_backend.dto.SubscriberDto@69edaa3a, mmd.assignment.dpa_backend.dto.SubscriberDto@1eedd69, mmd.assignment.dpa_backend.dto.SubscriberDto@2a554432, mmd.assignment.dpa_backend.dto.SubscriberDto@4188b005, mmd.assignment.dpa_backend.dto.SubscriberDto@45306e74]]
+2024-06-06T16:54:17.106+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2024-06-06T16:54:17.106+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-06-06T16:54:17.108+03:00 DEBUG 16004 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 302 FOUND, headers={masked}
+2024-06-06T16:54:30.012+03:00  INFO 16004 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:54:30
+2024-06-06T16:54:58.826+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/subscriber/16", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T16:54:58.848+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to mmd.assignment.dpa_backend.controller.SubscriberController#getSubscriber(Long)
+2024-06-06T16:54:58.907+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.method.HandlerMethod             : Arguments: [16]
+2024-06-06T16:54:58.982+03:00 DEBUG 16004 --- [dpa-backend] [http-nio-8080-exec-3] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [mmd.assignment.dpa_backend.exception.SubscriberNotFoundException: Subscriber is not exist with given id: 16]
+2024-06-06T16:54:58.983+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-06-06T16:54:58.983+03:00 DEBUG 16004 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={}
+2024-06-06T16:54:58.995+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T16:54:59.001+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+2024-06-06T16:54:59.002+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-06-06T16:54:59.010+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@45ced3c2]
+2024-06-06T16:54:59.019+03:00 DEBUG 16004 --- [dpa-backend] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-06-06T16:54:59.029+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Jun 06 16:54:59 TRT 2024, status=404, error=Not Found, path=/subscriber/16}]
+2024-06-06T16:54:59.039+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2024-06-06T16:54:59.039+03:00 TRACE 16004 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-06-06T16:54:59.049+03:00 DEBUG 16004 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={masked}
+2024-06-06T16:55:00.009+03:00  INFO 16004 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:55:00
+2024-06-06T16:55:07.135+03:00  INFO 16004 --- [dpa-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T16:55:07.146+03:00  INFO 16004 --- [dpa-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-06T16:55:07.155+03:00  INFO 16004 --- [dpa-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-06T16:55:14.518+03:00  INFO 21299 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : Starting DpaBackendApplication using Java 17.0.9 with PID 21299 (/Users/mertdortkardesler/Desktop/projects/interview/swa_dpa/target/classes started by mertdortkardesler in /Users/mertdortkardesler/Desktop/projects/interview/swa_dpa)
+2024-06-06T16:55:14.524+03:00  INFO 21299 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-06-06T16:55:15.630+03:00  INFO 21299 --- [dpa-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06T16:55:15.713+03:00  INFO 21299 --- [dpa-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interface.
+2024-06-06T16:55:17.045+03:00  INFO 21299 --- [dpa-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-06T16:55:17.066+03:00  INFO 21299 --- [dpa-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-06T16:55:17.066+03:00  INFO 21299 --- [dpa-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-06T16:55:17.154+03:00  INFO 21299 --- [dpa-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-06T16:55:17.154+03:00  INFO 21299 --- [dpa-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2530 ms
+2024-06-06T16:55:17.169+03:00 TRACE 21299 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
+2024-06-06T16:55:17.212+03:00 TRACE 21299 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
+2024-06-06T16:55:17.212+03:00 TRACE 21299 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'formContentFilter'; order=-9900, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]
+2024-06-06T16:55:17.213+03:00 TRACE 21299 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'requestContextFilter'; order=-105, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]
+2024-06-06T16:55:17.218+03:00 DEBUG 21299 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2024-06-06T16:55:17.218+03:00 DEBUG 21299 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-06T16:55:17.417+03:00  INFO 21299 --- [dpa-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06T16:55:17.456+03:00  INFO 21299 --- [dpa-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-06T16:55:17.481+03:00  INFO 21299 --- [dpa-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-06T16:55:17.711+03:00  INFO 21299 --- [dpa-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06T16:55:17.735+03:00  INFO 21299 --- [dpa-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-06T16:55:17.921+03:00  INFO 21299 --- [dpa-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@67b8d45
+2024-06-06T16:55:17.922+03:00  INFO 21299 --- [dpa-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-06T16:55:18.737+03:00  INFO 21299 --- [dpa-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06T16:55:18.786+03:00  INFO 21299 --- [dpa-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T16:55:19.817+03:00  WARN 21299 --- [dpa-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06T16:55:19.941+03:00 TRACE 21299 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	m.a.d.c.SubscriberController:
 	{POST [/subscriber]}: createSubscriber(SubscriberDto)
 	{PUT [/subscriber/{id}]}: updateSubscriber(Long,SubscriberDto)
 	{DELETE [/subscriber/{id}]}: deleteSubscriber(Long)
 	{GET [/subscriber]}: getAllSubscribers()
 	{GET [/subscriber/{id}]}: getSubscriber(Long)
-2024-06-06T16:43:00.639+03:00 TRACE 12870 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+2024-06-06T16:55:19.949+03:00 TRACE 21299 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
 	o.s.b.a.w.s.e.BasicErrorController:
 	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
 	{ [/error]}: error(HttpServletRequest)
-2024-06-06T16:43:00.642+03:00 DEBUG 12870 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
-2024-06-06T16:43:00.749+03:00 DEBUG 12870 --- [dpa-backend] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
-2024-06-06T16:43:00.907+03:00 TRACE 12870 --- [dpa-backend] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
-2024-06-06T16:43:00.921+03:00 TRACE 12870 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
-2024-06-06T16:43:00.921+03:00 TRACE 12870 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
-2024-06-06T16:43:00.921+03:00 DEBUG 12870 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
-2024-06-06T16:43:00.977+03:00 DEBUG 12870 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-2024-06-06T16:43:01.013+03:00 DEBUG 12870 --- [dpa-backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-2024-06-06T16:43:01.231+03:00  INFO 12870 --- [dpa-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-06-06T16:43:01.258+03:00  INFO 12870 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : Started DpaBackendApplication in 7.141 seconds (process running for 7.814)
-2024-06-06T16:43:30.060+03:00  INFO 12870 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:43:30
-2024-06-06T16:44:00.009+03:00  INFO 12870 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:44:00
-2024-06-06T16:44:30.012+03:00  INFO 12870 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:44:30
-2024-06-06T16:45:00.004+03:00  INFO 12870 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:45:00
-2024-06-06T16:45:30.009+03:00  INFO 12870 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:45:30
-2024-06-06T16:46:00.013+03:00  INFO 12870 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:46:00
-2024-06-06T16:46:30.012+03:00  INFO 12870 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:46:30
+2024-06-06T16:55:19.953+03:00 DEBUG 21299 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2024-06-06T16:55:19.990+03:00 DEBUG 21299 --- [dpa-backend] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-06-06T16:55:20.190+03:00 TRACE 21299 --- [dpa-backend] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-06-06T16:55:20.264+03:00 TRACE 21299 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-06-06T16:55:20.264+03:00 TRACE 21299 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-06-06T16:55:20.265+03:00 DEBUG 21299 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-06-06T16:55:20.314+03:00 DEBUG 21299 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-06T16:55:20.352+03:00 DEBUG 21299 --- [dpa-backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-06T16:55:20.578+03:00  INFO 21299 --- [dpa-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-06T16:55:20.608+03:00  INFO 21299 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : Started DpaBackendApplication in 6.882 seconds (process running for 7.584)
+2024-06-06T16:55:26.852+03:00  INFO 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-06T16:55:26.854+03:00  INFO 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-06T16:55:26.857+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@160d68b8
+2024-06-06T16:55:26.857+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@49e92724
+2024-06-06T16:55:26.857+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@6413eeb7
+2024-06-06T16:55:26.869+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2024-06-06T16:55:26.869+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2024-06-06T16:55:26.870+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-06T16:55:26.870+03:00  INFO 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2024-06-06T16:55:26.881+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/subscriber/16", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T16:55:26.892+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to mmd.assignment.dpa_backend.controller.SubscriberController#getSubscriber(Long)
+2024-06-06T16:55:26.940+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.method.HandlerMethod             : Arguments: [16]
+2024-06-06T16:55:27.039+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-2] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [mmd.assignment.dpa_backend.exception.SubscriberNotFoundException: Subscriber is not exist with given id: 16]
+2024-06-06T16:55:27.040+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-06-06T16:55:27.041+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={}
+2024-06-06T16:55:27.055+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T16:55:27.064+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+2024-06-06T16:55:27.064+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-06-06T16:55:27.070+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@1304a5b2]
+2024-06-06T16:55:27.096+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-06-06T16:55:27.101+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Jun 06 16:55:27 TRT 2024, status=404, error=Not Found, path=/subscriber/16}]
+2024-06-06T16:55:27.135+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2024-06-06T16:55:27.136+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-06-06T16:55:27.140+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={masked}
+2024-06-06T16:55:30.050+03:00  INFO 21299 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 16:55:30
+2024-06-06T16:55:32.853+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : GET "/subscriber/16", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T16:55:32.861+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to mmd.assignment.dpa_backend.controller.SubscriberController#getSubscriber(Long)
+2024-06-06T16:55:32.864+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.method.HandlerMethod             : Arguments: [16]
+2024-06-06T16:55:44.123+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-3] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [mmd.assignment.dpa_backend.exception.SubscriberNotFoundException: Subscriber is not exist with given id: 16]
+2024-06-06T16:55:44.126+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-06-06T16:55:44.128+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={}
+2024-06-06T16:55:44.132+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T16:55:44.134+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+2024-06-06T16:55:44.134+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-06-06T16:55:44.135+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@339894ad]
+2024-06-06T16:55:44.136+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-06-06T16:55:44.138+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Jun 06 16:55:44 TRT 2024, status=404, error=Not Found, path=/subscriber/16}]
+2024-06-06T16:55:44.142+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2024-06-06T16:55:44.142+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-06-06T16:55:44.143+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={masked}
+2024-06-06T16:56:00.030+03:00  INFO 21299 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 16:56:00
+2024-06-06T16:56:06.223+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : GET "/subscriber/16", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T16:56:06.228+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to mmd.assignment.dpa_backend.controller.SubscriberController#getSubscriber(Long)
+2024-06-06T16:56:06.247+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-6] o.s.web.method.HandlerMethod             : Arguments: [16]
+2024-06-06T16:56:19.678+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-6] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [mmd.assignment.dpa_backend.exception.SubscriberNotFoundException: Subscriber is not exist with given id: 16]
+2024-06-06T16:56:19.679+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-06-06T16:56:19.680+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={}
+2024-06-06T16:56:19.682+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T16:56:19.683+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+2024-06-06T16:56:19.684+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-06-06T16:56:19.685+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-6] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@6932bc33]
+2024-06-06T16:56:19.687+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-06-06T16:56:19.692+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Jun 06 16:56:19 TRT 2024, status=404, error=Not Found, path=/subscriber/16}]
+2024-06-06T16:56:19.693+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-6] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2024-06-06T16:56:19.694+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-06-06T16:56:19.694+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={masked}
+2024-06-06T16:56:30.010+03:00  INFO 21299 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 16:56:30
+2024-06-06T16:56:46.431+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : GET "/subscriber/16", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T16:56:46.436+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to mmd.assignment.dpa_backend.controller.SubscriberController#getSubscriber(Long)
+2024-06-06T16:56:46.450+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-8] o.s.web.method.HandlerMethod             : Arguments: [16]
+2024-06-06T17:00:11.855+03:00  WARN 21299 --- [dpa-backend] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m20s389ms).
+2024-06-06T17:00:11.855+03:00  INFO 21299 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:00:11
+2024-06-06T17:00:11.888+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-8] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [mmd.assignment.dpa_backend.exception.SubscriberNotFoundException: Subscriber is not exist with given id: 16]
+2024-06-06T17:00:11.889+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-06-06T17:00:11.899+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={}
+2024-06-06T17:00:11.903+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T17:00:11.907+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+2024-06-06T17:00:11.909+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-06-06T17:00:11.914+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-8] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@722a5785]
+2024-06-06T17:00:11.923+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-06-06T17:00:11.924+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-8] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Jun 06 17:00:11 TRT 2024, status=404, error=Not Found, path=/subscriber/16}]
+2024-06-06T17:00:11.927+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-8] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2024-06-06T17:00:11.927+03:00 TRACE 21299 --- [dpa-backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-06-06T17:00:11.931+03:00 DEBUG 21299 --- [dpa-backend] [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={masked}
+2024-06-06T17:00:12.003+03:00  INFO 21299 --- [dpa-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T17:00:12.013+03:00  INFO 21299 --- [dpa-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-06T17:00:12.020+03:00  INFO 21299 --- [dpa-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-06T17:00:27.249+03:00  INFO 25128 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : Starting DpaBackendApplication using Java 17.0.9 with PID 25128 (/Users/mertdortkardesler/Desktop/projects/interview/swa_dpa/target/classes started by mertdortkardesler in /Users/mertdortkardesler/Desktop/projects/interview/swa_dpa)
+2024-06-06T17:00:27.263+03:00  INFO 25128 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-06-06T17:00:28.385+03:00  INFO 25128 --- [dpa-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06T17:00:28.463+03:00  INFO 25128 --- [dpa-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 71 ms. Found 1 JPA repository interface.
+2024-06-06T17:00:29.819+03:00  INFO 25128 --- [dpa-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-06T17:00:29.831+03:00  INFO 25128 --- [dpa-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-06T17:00:29.832+03:00  INFO 25128 --- [dpa-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-06T17:00:29.906+03:00  INFO 25128 --- [dpa-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-06T17:00:29.906+03:00  INFO 25128 --- [dpa-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2540 ms
+2024-06-06T17:00:29.914+03:00 TRACE 25128 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
+2024-06-06T17:00:29.947+03:00 TRACE 25128 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
+2024-06-06T17:00:29.947+03:00 TRACE 25128 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'formContentFilter'; order=-9900, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]
+2024-06-06T17:00:29.947+03:00 TRACE 25128 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'requestContextFilter'; order=-105, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]
+2024-06-06T17:00:29.963+03:00 DEBUG 25128 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2024-06-06T17:00:29.965+03:00 DEBUG 25128 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-06T17:00:30.237+03:00  INFO 25128 --- [dpa-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06T17:00:30.283+03:00  INFO 25128 --- [dpa-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-06T17:00:30.313+03:00  INFO 25128 --- [dpa-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-06T17:00:30.521+03:00  INFO 25128 --- [dpa-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06T17:00:30.540+03:00  INFO 25128 --- [dpa-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-06T17:00:30.728+03:00  INFO 25128 --- [dpa-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@365e65bb
+2024-06-06T17:00:30.729+03:00  INFO 25128 --- [dpa-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-06T17:00:31.554+03:00  INFO 25128 --- [dpa-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06T17:00:31.610+03:00  INFO 25128 --- [dpa-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T17:00:32.962+03:00  WARN 25128 --- [dpa-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06T17:00:33.159+03:00 TRACE 25128 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	m.a.d.c.SubscriberController:
+	{POST [/subscriber]}: createSubscriber(SubscriberDto)
+	{PUT [/subscriber/{id}]}: updateSubscriber(Long,SubscriberDto)
+	{DELETE [/subscriber/{id}]}: deleteSubscriber(Long)
+	{GET [/subscriber]}: getAllSubscribers()
+	{GET [/subscriber/{id}]}: getSubscriber(Long)
+2024-06-06T17:00:33.168+03:00 TRACE 25128 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2024-06-06T17:00:33.172+03:00 DEBUG 25128 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2024-06-06T17:00:33.217+03:00 DEBUG 25128 --- [dpa-backend] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-06-06T17:00:33.458+03:00 TRACE 25128 --- [dpa-backend] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-06-06T17:00:33.479+03:00 TRACE 25128 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-06-06T17:00:33.480+03:00 TRACE 25128 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-06-06T17:00:33.480+03:00 DEBUG 25128 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-06-06T17:00:33.547+03:00 DEBUG 25128 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-06T17:00:33.581+03:00 DEBUG 25128 --- [dpa-backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-06T17:00:33.790+03:00  INFO 25128 --- [dpa-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-06T17:00:33.829+03:00  INFO 25128 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : Started DpaBackendApplication in 7.544 seconds (process running for 8.335)
+2024-06-06T17:00:41.093+03:00  INFO 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-06T17:00:41.096+03:00  INFO 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-06T17:00:41.098+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@768f2398
+2024-06-06T17:00:41.098+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@956cf3d
+2024-06-06T17:00:41.098+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@68ea1eb5
+2024-06-06T17:00:41.104+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2024-06-06T17:00:41.104+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2024-06-06T17:00:41.108+03:00 DEBUG 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-06T17:00:41.108+03:00  INFO 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2024-06-06T17:00:41.119+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : GET "/subscriber/16", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T17:00:41.130+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to mmd.assignment.dpa_backend.controller.SubscriberController#getSubscriber(Long)
+2024-06-06T17:00:41.166+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.method.HandlerMethod             : Arguments: [16]
+2024-06-06T17:01:00.781+03:00  INFO 25128 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:01:00
+2024-06-06T17:01:00.883+03:00 DEBUG 25128 --- [dpa-backend] [http-nio-8080-exec-2] .w.s.m.a.ResponseStatusExceptionResolver : Resolved [mmd.assignment.dpa_backend.exception.SubscriberNotFoundException: Subscriber is not exist with given id: 16]
+2024-06-06T17:01:00.884+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-06-06T17:01:00.887+03:00 DEBUG 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed 404 NOT_FOUND, headers={}
+2024-06-06T17:01:00.896+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for GET "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T17:01:00.898+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+2024-06-06T17:01:00.898+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-06-06T17:01:00.902+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@1e7c8de6]
+2024-06-06T17:01:00.925+03:00 DEBUG 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-06-06T17:01:00.930+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Jun 06 17:01:00 TRT 2024, status=404, error=Not Found, path=/subscriber/16}]
+2024-06-06T17:01:00.977+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2024-06-06T17:01:00.978+03:00 TRACE 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-06-06T17:01:00.986+03:00 DEBUG 25128 --- [dpa-backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 404, headers={masked}
+2024-06-06T17:01:30.020+03:00  INFO 25128 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:01:30
+2024-06-06T17:02:00.014+03:00  INFO 25128 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:02:00
+2024-06-06T17:02:30.008+03:00  INFO 25128 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:02:30
+2024-06-06T17:02:33.329+03:00  INFO 25128 --- [dpa-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T17:02:33.342+03:00  INFO 25128 --- [dpa-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-06-06T17:02:33.356+03:00  INFO 25128 --- [dpa-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-06-06T17:02:39.731+03:00  INFO 26783 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : Starting DpaBackendApplication using Java 17.0.9 with PID 26783 (/Users/mertdortkardesler/Desktop/projects/interview/swa_dpa/target/classes started by mertdortkardesler in /Users/mertdortkardesler/Desktop/projects/interview/swa_dpa)
+2024-06-06T17:02:39.739+03:00  INFO 26783 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-06-06T17:02:40.832+03:00  INFO 26783 --- [dpa-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06T17:02:40.921+03:00  INFO 26783 --- [dpa-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 1 JPA repository interface.
+2024-06-06T17:02:42.331+03:00  INFO 26783 --- [dpa-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-06T17:02:42.342+03:00  INFO 26783 --- [dpa-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-06T17:02:42.343+03:00  INFO 26783 --- [dpa-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-06T17:02:42.413+03:00  INFO 26783 --- [dpa-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-06T17:02:42.414+03:00  INFO 26783 --- [dpa-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2550 ms
+2024-06-06T17:02:42.422+03:00 TRACE 26783 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
+2024-06-06T17:02:42.457+03:00 TRACE 26783 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
+2024-06-06T17:02:42.458+03:00 TRACE 26783 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'formContentFilter'; order=-9900, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]
+2024-06-06T17:02:42.458+03:00 TRACE 26783 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'requestContextFilter'; order=-105, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]
+2024-06-06T17:02:42.461+03:00 DEBUG 26783 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2024-06-06T17:02:42.464+03:00 DEBUG 26783 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-06T17:02:42.723+03:00  INFO 26783 --- [dpa-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06T17:02:42.775+03:00  INFO 26783 --- [dpa-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-06T17:02:42.797+03:00  INFO 26783 --- [dpa-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-06T17:02:43.018+03:00  INFO 26783 --- [dpa-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06T17:02:43.038+03:00  INFO 26783 --- [dpa-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-06T17:02:43.217+03:00  INFO 26783 --- [dpa-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@362a6aa5
+2024-06-06T17:02:43.219+03:00  INFO 26783 --- [dpa-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-06T17:02:43.951+03:00  INFO 26783 --- [dpa-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06T17:02:43.997+03:00  INFO 26783 --- [dpa-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T17:02:45.075+03:00  WARN 26783 --- [dpa-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06T17:02:45.222+03:00 TRACE 26783 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	m.a.d.c.SubscriberController:
+	{POST [/subscriber]}: createSubscriber(SubscriberDto)
+	{PUT [/subscriber/{id}]}: updateSubscriber(Long,SubscriberDto)
+	{DELETE [/subscriber/{id}]}: deleteSubscriber(Long)
+	{GET [/subscriber]}: getAllSubscribers()
+	{GET [/subscriber/{id}]}: getSubscriber(Long)
+2024-06-06T17:02:45.233+03:00 TRACE 26783 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2024-06-06T17:02:45.237+03:00 DEBUG 26783 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2024-06-06T17:02:45.286+03:00 DEBUG 26783 --- [dpa-backend] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-06-06T17:02:45.460+03:00 TRACE 26783 --- [dpa-backend] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-06-06T17:02:45.474+03:00 TRACE 26783 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-06-06T17:02:45.474+03:00 TRACE 26783 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-06-06T17:02:45.475+03:00 DEBUG 26783 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-06-06T17:02:45.518+03:00 DEBUG 26783 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-06T17:02:45.634+03:00 DEBUG 26783 --- [dpa-backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-06T17:02:45.880+03:00  INFO 26783 --- [dpa-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-06T17:02:45.913+03:00  INFO 26783 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : Started DpaBackendApplication in 6.962 seconds (process running for 7.721)
+2024-06-06T17:02:56.135+03:00  INFO 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-06-06T17:02:56.136+03:00  INFO 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-06-06T17:02:56.137+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.multipart.support.StandardServletMultipartResolver@5f1dadf4
+2024-06-06T17:02:56.137+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.i18n.AcceptHeaderLocaleResolver@21539796
+2024-06-06T17:02:56.137+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected org.springframework.web.servlet.theme.FixedThemeResolver@623ed5ed
+2024-06-06T17:02:56.150+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected DefaultRequestToViewNameTranslator
+2024-06-06T17:02:56.150+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Detected SessionFlashMapManager
+2024-06-06T17:02:56.151+03:00 DEBUG 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-06-06T17:02:56.152+03:00  INFO 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2024-06-06T17:02:56.167+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : POST "/subscriber", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T17:02:56.174+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to mmd.assignment.dpa_backend.controller.SubscriberController#createSubscriber(SubscriberDto)
+2024-06-06T17:02:56.265+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [mmd.assignment.dpa_backend.dto.SubscriberDto@7210b6e5]
+2024-06-06T17:02:56.278+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.web.method.HandlerMethod             : Arguments: [mmd.assignment.dpa_backend.dto.SubscriberDto@7210b6e5]
+2024-06-06T17:03:00.818+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:03:00
+2024-06-06T17:03:00.804+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Failed to complete request
+
+java.lang.IllegalArgumentException: Subscriber name can not be empty.
+	at org.springframework.util.Assert.notNull(Assert.java:172) ~[spring-core-6.1.8.jar:6.1.8]
+	at mmd.assignment.dpa_backend.service.impl.SubscriberServiceImpl.createSubscriber(SubscriberServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716) ~[spring-aop-6.1.8.jar:6.1.8]
+	at mmd.assignment.dpa_backend.service.impl.SubscriberServiceImpl$$SpringCGLIB$$0.createSubscriber(<generated>) ~[classes/:na]
+	at mmd.assignment.dpa_backend.controller.SubscriberController.createSubscriber(SubscriberController.java:22) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.1.8.jar:6.1.8]
+	at mmd.assignment.dpa_backend.aspect.LoggingAspect.logAround(LoggingAspect.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.8.jar:6.1.8]
+	at mmd.assignment.dpa_backend.controller.SubscriberController$$SpringCGLIB$$0.createSubscriber(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2024-06-06T17:03:00.841+03:00 ERROR 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.IllegalArgumentException: Subscriber name can not be empty.] with root cause
+
+java.lang.IllegalArgumentException: Subscriber name can not be empty.
+	at org.springframework.util.Assert.notNull(Assert.java:172) ~[spring-core-6.1.8.jar:6.1.8]
+	at mmd.assignment.dpa_backend.service.impl.SubscriberServiceImpl.createSubscriber(SubscriberServiceImpl.java:26) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716) ~[spring-aop-6.1.8.jar:6.1.8]
+	at mmd.assignment.dpa_backend.service.impl.SubscriberServiceImpl$$SpringCGLIB$$0.createSubscriber(<generated>) ~[classes/:na]
+	at mmd.assignment.dpa_backend.controller.SubscriberController.createSubscriber(SubscriberController.java:22) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:354) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89) ~[spring-aop-6.1.8.jar:6.1.8]
+	at mmd.assignment.dpa_backend.aspect.LoggingAspect.logAround(LoggingAspect.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768) ~[spring-aop-6.1.8.jar:6.1.8]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720) ~[spring-aop-6.1.8.jar:6.1.8]
+	at mmd.assignment.dpa_backend.controller.SubscriberController$$SpringCGLIB$$0.createSubscriber(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.1.8.jar:6.1.8]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.24.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.1.8.jar:6.1.8]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:389) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.24.jar:10.1.24]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+
+2024-06-06T17:03:00.853+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : "ERROR" dispatch for POST "/error", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T17:03:00.856+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : 2 matching mappings: [{ [/error]}, { [/error], produces [text/html]}]
+2024-06-06T17:03:00.857+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-06-06T17:03:00.865+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.web.method.HandlerMethod             : Arguments: [org.apache.catalina.core.ApplicationHttpRequest@785b4676]
+2024-06-06T17:03:00.885+03:00 DEBUG 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-06-06T17:03:00.896+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [{timestamp=Thu Jun 06 17:03:00 TRT 2024, status=500, error=Internal Server Error, path=/subscriber}]
+2024-06-06T17:03:00.921+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2024-06-06T17:03:00.921+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-06-06T17:03:00.929+03:00 DEBUG 26783 --- [dpa-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Exiting from "ERROR" dispatch, status 500, headers={masked}
+2024-06-06T17:03:14.601+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : POST "/subscriber", parameters={}, headers={masked} in DispatcherServlet 'dispatcherServlet'
+2024-06-06T17:03:14.609+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped to mmd.assignment.dpa_backend.controller.SubscriberController#createSubscriber(SubscriberDto)
+2024-06-06T17:03:14.622+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-3] m.m.a.RequestResponseBodyMethodProcessor : Read "application/json;charset=UTF-8" to [mmd.assignment.dpa_backend.dto.SubscriberDto@70882be2]
+2024-06-06T17:03:14.626+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.method.HandlerMethod             : Arguments: [mmd.assignment.dpa_backend.dto.SubscriberDto@70882be2]
+2024-06-06T17:03:18.962+03:00 DEBUG 26783 --- [dpa-backend] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-06-06T17:03:18.964+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor  : Writing [mmd.assignment.dpa_backend.dto.SubscriberDto@563ab71]
+2024-06-06T17:03:18.968+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-3] s.w.s.m.m.a.RequestMappingHandlerAdapter : Applying default cacheSeconds=-1
+2024-06-06T17:03:18.969+03:00 TRACE 26783 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : No view rendering, null ModelAndView returned.
+2024-06-06T17:03:18.973+03:00 DEBUG 26783 --- [dpa-backend] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed 201 CREATED, headers={masked}
+2024-06-06T17:03:30.013+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:03:30
+2024-06-06T17:04:00.008+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:04:00
+2024-06-06T17:04:30.004+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:04:30
+2024-06-06T17:05:00.025+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:05:00
+2024-06-06T17:05:30.007+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:05:30
+2024-06-06T17:06:00.044+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:06:00
+2024-06-06T17:06:30.009+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:06:30
+2024-06-06T17:07:00.008+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:07:00
+2024-06-06T17:07:30.009+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:07:30
+2024-06-06T17:08:00.009+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:08:00
+2024-06-06T17:08:29.971+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:08:29
+2024-06-06T17:09:00.008+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:09:00

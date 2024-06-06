@@ -10,6 +10,7 @@ import mmd.assignment.dpa_backend.service.SubscriberService;
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -22,6 +23,7 @@ public class SubscriberServiceImpl implements SubscriberService {
 
     @Override
     public SubscriberDto createSubscriber(SubscriberDto subscriberDto) {
+        Assert.notNull(subscriberDto.getName(), "Subscriber name can not be empty.");
         Subscriber subscriber = SubscriberMapper.mapToSubscriber(subscriberDto);
         Subscriber savedSubscriber = subscriberRepository.save(subscriber);
         return SubscriberMapper.mapToSubscriberDto(savedSubscriber);

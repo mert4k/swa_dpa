@@ -12,10 +12,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @SpringBootApplication
 public class DpaBackendApplication {
 
-	public Resource loadSubscribersWithClassPathResource() {
-		return new ClassPathResource("data/data.json");
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(DpaBackendApplication.class, args);
 	}

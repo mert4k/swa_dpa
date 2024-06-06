@@ -17,8 +17,8 @@ public class ScheduledTasks {
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
     @Scheduled(cron = "${scheduled.job.cron.expression}")
-    public void reportCurrentTime() {
+    public void updateDataSource() {
         // TODO implement datasource update.
-        logger.info("The time is now {}", dateFormat.format(new Date()));
+        logger.info("Updating datasource.. The time is {}", dateFormat.format(new Date()));
     }
 }
