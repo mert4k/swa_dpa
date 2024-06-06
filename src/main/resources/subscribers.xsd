@@ -2,17 +2,41 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
     <xs:element name="getAllSubscribersRequest">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="name" type="xs:string"/>
-            </xs:sequence>
-        </xs:complexType>
+        <xs:complexType />
     </xs:element>
 
     <xs:element name="getAllSubscribersResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="country" type="country"/>
+                <xs:element name="subscriber" type="subscriber" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getActiveSubscribersRequest">
+        <xs:complexType />
+    </xs:element>
+
+    <xs:element name="getActiveSubscribersResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="subscriber" type="subscriber" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getSubscriberByIdRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:long"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="getSubscriberByIdResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="subscriber" type="subscriber"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -22,15 +46,15 @@
             <xs:element name="id" type="xs:long"/>
             <xs:element name="name" type="xs:string"/>
             <xs:element name="msisdn" type="xs:string"/>
-            <xs:element name="status" type="tns:currency"/>
+            <xs:element name="status" type="status"/>
         </xs:sequence>
     </xs:complexType>
 
-    <xs:simpleType name="currency">
+    <xs:simpleType name="status">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="GBP"/>
-            <xs:enumeration value="EUR"/>
-            <xs:enumeration value="PLN"/>
+            <xs:enumeration value="ACTIVE"/>
+            <xs:enumeration value="DEACTIVATED"/>
+            <xs:enumeration value="SUSPENDED"/>
         </xs:restriction>
     </xs:simpleType>
 </xs:schema>
