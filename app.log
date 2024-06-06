@@ -559,3 +559,7 @@ java.lang.IllegalArgumentException: Subscriber name can not be empty.
 2024-06-06T17:08:00.009+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:08:00
 2024-06-06T17:08:29.971+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:08:29
 2024-06-06T17:09:00.008+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:09:00
+2024-06-06T17:09:30.005+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:09:30
+2024-06-06T17:10:00.029+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:10:00
+2024-06-06T17:10:30.084+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:10:30
+2024-06-06T17:11:00.007+03:00  INFO 26783 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : Updating datasource.. The time is 17:11:00
