@@ -3,8 +3,8 @@ package mmd.assignment.dpa_backend.controller;
 import lombok.AllArgsConstructor;
 import mmd.assignment.dpa_backend.dto.SubscriberDto;
 import mmd.assignment.dpa_backend.service.SubscriberService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.env.Environment;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +15,6 @@ import java.util.List;
 @RestController
 @RequestMapping("subscriber")
 public class SubscriberController {
-
     private SubscriberService subscriberService;
 
     @PostMapping
@@ -31,7 +30,7 @@ public class SubscriberController {
     }
 
     @DeleteMapping("{id}")
-    public ResponseEntity<String> updateSubscriber(@PathVariable("id") Long subscriberId) {
+    public ResponseEntity<String> deleteSubscriber(@PathVariable("id") Long subscriberId) {
         subscriberService.deleteSubscriber(subscriberId);
         return ResponseEntity.ok("Subscriber deleted successfully.");
     }

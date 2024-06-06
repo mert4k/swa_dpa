@@ -1,0 +1,53 @@
+2024-06-06T16:42:54.934+03:00  INFO 12870 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : Starting DpaBackendApplication using Java 17.0.9 with PID 12870 (/Users/mertdortkardesler/Desktop/projects/interview/swa_dpa/target/classes started by mertdortkardesler in /Users/mertdortkardesler/Desktop/projects/interview/swa_dpa)
+2024-06-06T16:42:54.940+03:00  INFO 12870 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : No active profile set, falling back to 1 default profile: "default"
+2024-06-06T16:42:56.062+03:00  INFO 12870 --- [dpa-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-06-06T16:42:56.145+03:00  INFO 12870 --- [dpa-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 77 ms. Found 1 JPA repository interface.
+2024-06-06T16:42:57.662+03:00  INFO 12870 --- [dpa-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-06-06T16:42:57.673+03:00  INFO 12870 --- [dpa-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-06-06T16:42:57.673+03:00  INFO 12870 --- [dpa-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-06-06T16:42:57.749+03:00  INFO 12870 --- [dpa-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-06-06T16:42:57.749+03:00  INFO 12870 --- [dpa-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2685 ms
+2024-06-06T16:42:57.757+03:00 TRACE 12870 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Added existing Servlet initializer bean 'dispatcherServletRegistration'; order=2147483647, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/DispatcherServletAutoConfiguration$DispatcherServletRegistrationConfiguration.class]
+2024-06-06T16:42:57.818+03:00 TRACE 12870 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'characterEncodingFilter'; order=-2147483648, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/HttpEncodingAutoConfiguration.class]
+2024-06-06T16:42:57.819+03:00 TRACE 12870 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'formContentFilter'; order=-9900, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration.class]
+2024-06-06T16:42:57.820+03:00 TRACE 12870 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Created Filter initializer for bean 'requestContextFilter'; order=-105, resource=class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]
+2024-06-06T16:42:57.825+03:00 DEBUG 12870 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping filters: characterEncodingFilter urls=[/*] order=-2147483648, formContentFilter urls=[/*] order=-9900, requestContextFilter urls=[/*] order=-105
+2024-06-06T16:42:57.826+03:00 DEBUG 12870 --- [dpa-backend] [main] o.s.b.w.s.ServletContextInitializerBeans : Mapping servlets: dispatcherServlet urls=[/]
+2024-06-06T16:42:58.069+03:00  INFO 12870 --- [dpa-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-06-06T16:42:58.103+03:00  INFO 12870 --- [dpa-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-06-06T16:42:58.122+03:00  INFO 12870 --- [dpa-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-06-06T16:42:58.342+03:00  INFO 12870 --- [dpa-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-06-06T16:42:58.366+03:00  INFO 12870 --- [dpa-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-06-06T16:42:58.621+03:00  INFO 12870 --- [dpa-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4e2109fe
+2024-06-06T16:42:58.623+03:00  INFO 12870 --- [dpa-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-06-06T16:42:59.451+03:00  INFO 12870 --- [dpa-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-06-06T16:42:59.487+03:00  INFO 12870 --- [dpa-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-06-06T16:43:00.520+03:00  WARN 12870 --- [dpa-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-06-06T16:43:00.630+03:00 TRACE 12870 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	m.a.d.c.SubscriberController:
+	{POST [/subscriber]}: createSubscriber(SubscriberDto)
+	{PUT [/subscriber/{id}]}: updateSubscriber(Long,SubscriberDto)
+	{DELETE [/subscriber/{id}]}: deleteSubscriber(Long)
+	{GET [/subscriber]}: getAllSubscribers()
+	{GET [/subscriber/{id}]}: getSubscriber(Long)
+2024-06-06T16:43:00.639+03:00 TRACE 12870 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 
+	o.s.b.a.w.s.e.BasicErrorController:
+	{ [/error], produces [text/html]}: errorHtml(HttpServletRequest,HttpServletResponse)
+	{ [/error]}: error(HttpServletRequest)
+2024-06-06T16:43:00.642+03:00 DEBUG 12870 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerMapping : 7 mappings in 'requestMappingHandlerMapping'
+2024-06-06T16:43:00.749+03:00 DEBUG 12870 --- [dpa-backend] [main] o.s.w.s.h.BeanNameUrlHandlerMapping      : Detected 0 mappings in 'beanNameHandlerMapping'
+2024-06-06T16:43:00.907+03:00 TRACE 12870 --- [dpa-backend] [main] o.s.w.s.f.support.RouterFunctionMapping  : 0 RouterFunction(s) in 'routerFunctionMapping'
+2024-06-06T16:43:00.921+03:00 TRACE 12870 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/webjars/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/webjars/]]
+2024-06-06T16:43:00.921+03:00 TRACE 12870 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped [/**] onto ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-06-06T16:43:00.921+03:00 DEBUG 12870 --- [dpa-backend] [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-06-06T16:43:00.977+03:00 DEBUG 12870 --- [dpa-backend] [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-06-06T16:43:01.013+03:00 DEBUG 12870 --- [dpa-backend] [main] .m.m.a.ExceptionHandlerExceptionResolver : ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-06-06T16:43:01.231+03:00  INFO 12870 --- [dpa-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-06-06T16:43:01.258+03:00  INFO 12870 --- [dpa-backend] [main] m.a.dpa_backend.DpaBackendApplication    : Started DpaBackendApplication in 7.141 seconds (process running for 7.814)
+2024-06-06T16:43:30.060+03:00  INFO 12870 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:43:30
+2024-06-06T16:44:00.009+03:00  INFO 12870 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:44:00
+2024-06-06T16:44:30.012+03:00  INFO 12870 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:44:30
+2024-06-06T16:45:00.004+03:00  INFO 12870 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:45:00
+2024-06-06T16:45:30.009+03:00  INFO 12870 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:45:30
+2024-06-06T16:46:00.013+03:00  INFO 12870 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:46:00
+2024-06-06T16:46:30.012+03:00  INFO 12870 --- [dpa-backend] [scheduling-1] m.a.dpa_backend.aspect.LoggingAspect     : The time is now 16:46:30

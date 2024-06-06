@@ -1,16 +1,20 @@
 package mmd.assignment.dpa_backend;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.core.env.Environment;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableCaching
+@EnableScheduling
 @SpringBootApplication
 public class DpaBackendApplication {
+
+	public Resource loadSubscribersWithClassPathResource() {
+		return new ClassPathResource("data/data.json");
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(DpaBackendApplication.class, args);
