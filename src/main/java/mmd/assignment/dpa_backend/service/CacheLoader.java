@@ -1,9 +1,6 @@
 package mmd.assignment.dpa_backend.service;
 
 import lombok.RequiredArgsConstructor;
-import mmd.assignment.dpa_backend.DpaBackendApplication;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.env.Environment;
@@ -18,6 +15,13 @@ public class CacheLoader  implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        // TODO implement this datasource decision point.
         boolean readDataFromDb = Boolean.parseBoolean(env.getProperty("read.data.from.db"));
+        if(readDataFromDb) {
+            // set postgresql datasource
+        }
+        else{
+            // set json data source
+        }
     }
 }
